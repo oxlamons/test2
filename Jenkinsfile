@@ -23,22 +23,22 @@ pipeline {
                 sh 'docker-compose stop'
             }
         }
-        stage('build images'){
-            steps {
-                script {
-                    sh 'ls -la'
+        //stage('build images'){
+          //  steps {
+            //    script {
+              //      sh 'ls -la'
                     //docker.withRegistry('https://hub.docker.com/u/oxlamonsrivne', 'dockerHubCredentials') {
                      //image = docker.image(':bar')
                     // image.pull()
                // sh 'docker tag mysql ${dockerHubUsername}:${dockerImageTag}'
-                    dockerImage1 = docker.build(imageName1, 'wordpress/.')
-                    dockerImage2 = docker.build(imageName2, 'db')
-                    dockerImage3 = docker.build(imageName3, 'webserver')
-                    dockerImage4 = docker.build(imageName4, 'cerboot')
-                }
-            }
+                 //   dockerImage1 = docker.build(imageName1, 'wordpress/.')
+                  //  dockerImage2 = docker.build(imageName2, 'db')
+                  //  dockerImage3 = docker.build(imageName3, 'webserver')
+                   // dockerImage4 = docker.build(imageName4, 'cerboot')
+               // }
+          //  }
 
-        }
+      //  }
         stage('deploy images'){
             steps{
                 script {
