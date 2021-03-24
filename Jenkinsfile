@@ -34,7 +34,7 @@ pipeline {
                     dockerImage1 = docker.build(imageName1, 'wordpress')
                     dockerImage2 = docker.build(imageName2, 'db')
                     dockerImage3 = docker.build(imageName3, 'webserver')
-                    dockerImage4 = docker.build(imageName3, 'cerboot')
+                    dockerImage4 = docker.build(imageName4, 'cerboot')
                 }
             }
 
