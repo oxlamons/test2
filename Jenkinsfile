@@ -7,7 +7,7 @@ pipeline {
         imageName1 = "$dockerHubUsername/wordpress:$dockerImageTag"
         imageName2 = "$dockerHubUsername/db:$dockerImageTag"
         imageName3 = "$dockerHubUsername/webserver:$dockerImageTag"
-        imageName3 = "$dockerHubUsername/cerboot:$dockerImageTag"
+        imageName4 = "$dockerHubUsername/cerboot:$dockerImageTag"
     }
     agent any
     stages {
@@ -34,7 +34,7 @@ pipeline {
                     dockerImage1 = docker.build(imageName1, 'wordpress')
                     dockerImage2 = docker.build(imageName2, 'db')
                     dockerImage3 = docker.build(imageName3, 'webserver')
-                    dockerImage3 = docker.build(imageName3, 'cerboot')
+                    dockerImage4 = docker.build(imageName3, 'cerboot')
                 }
             }
 
