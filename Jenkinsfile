@@ -14,7 +14,7 @@ pipeline {
         stage('docker-compose up') {
             steps {
                 sh 'docker images ls'
-                sh 'docker-compose  --env-file /home/anton/wordpress.env up -d'
+                sh 'docker-compose  --env-file ./home/anton/wordpress/.env up -d'
             }
         }
         stage('stop running containers') {
