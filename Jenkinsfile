@@ -1,7 +1,7 @@
 pipeline {
     environment{
         dockerHubCredentials = "docker-hub-credentials"
-        #dockerImage1 = ' '
+        dockerImage = ' '
         dockerHubUsername = "oxlamonsrivne"
         dockerImageTag = "1.0"
         imageName1 = "$dockerHubUsername/wordpress:$dockerImageTag"
