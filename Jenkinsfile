@@ -3,7 +3,7 @@ pipeline {
         dockerHubCredentials = "docker-hub-credentials"
         dockerImage = ' '
         dockerHubUsername = "oxlamonsrivne"
-        dockerImageTag = "1.0"
+        dockerImageTag = "1.0.0"
         imageName1 = "$dockerHubUsername/wordpress:$dockerImageTag"
         imageName2 = "$dockerHubUsername/db:$dockerImageTag"
         imageName3 = "$dockerHubUsername/webserver:$dockerImageTag"
@@ -31,7 +31,7 @@ pipeline {
                      //image = docker.image(':bar')
                     // image.pull()
                // sh 'docker tag mysql ${dockerHubUsername}:${dockerImageTag}'
-                    dockerImage1 = docker.build(imageName1, 'wordpress')
+                    dockerImage1 = docker.build(imageName1, 'wordpress:5.1.1-fpm-alpine')
                     dockerImage2 = docker.build(imageName2, 'db')
                     dockerImage3 = docker.build(imageName3, 'webserver')
                     dockerImage4 = docker.build(imageName4, 'cerboot')
