@@ -13,6 +13,7 @@ pipeline {
     stages {
         stage('docker-compose up') {
             steps {
+                sh 'docker ps -a'
                 sh 'docker images ls'
                 sh 'docker-compose  --env-file ./home/anton/wordpress/.env up -d'
             }
