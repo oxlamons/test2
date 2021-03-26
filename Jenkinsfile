@@ -47,7 +47,7 @@ pipeline {
             steps{
                 script {
                  docker.withRegistry( '', 'dockerHubCredentials') {
-                     sh 'docker push oxlamonsrivne/wordpress:1.0'
+                     sh 'docker push oxlamonsrivne/wordpress:$dockerImageTag'
                  //dockerImage1.push()
                  //dockerImage2.push()
                 // dockerImage3.push()
@@ -58,7 +58,7 @@ pipeline {
         }
         stage('remove images'){
             steps{
-                sh "docker rmi $imageName1 $imageName2 $imageName3 $imageName4"
+                sh "docker rmi $imageName1 "
            }
         }
 
