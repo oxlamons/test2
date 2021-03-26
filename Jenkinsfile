@@ -22,6 +22,7 @@ pipeline {
             steps {
                 sh 'docker images ls'
                 sh 'docker-compose stop'
+                sh 'docker images ls'
             }
         }
         stage('build images'){
