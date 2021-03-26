@@ -39,9 +39,9 @@ pipeline {
                     //dockerImage3 = docker.build(imageName3, '~/webserver')
                     //dockerImage4 = docker.build(imageName4, '~/cerboot')
                     sh 'docker tag wordpress:5.1.1-fpm-alpine $imageName1'
-                    sh 'docker tag mysql:8.0 $imageName1'
+                    sh 'docker tag mysql:8.0 $imageName2'
                     sh 'docker tag nginx:1.15.12-alpine $imageName3'
-                    sh 'docker tag certbot:latest $imageName4'
+                    sh 'docker tag certbot/cerboot:latest $imageName4'
                 }
             }
 
