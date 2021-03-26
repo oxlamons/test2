@@ -3,7 +3,7 @@ pipeline {
         dockerHubCredentials = "docker-hub-credentials"
         dockerImage = ''
        
-        dockerHubUsernae = "oxlamonsrivne"
+        dockerHubUsername = "oxlamonsrivne"
         dockerImageTag = "1.0"
         imageName1 = "$dockerHubUsername/wordpress:$dockerImageTag"
         imageName2 = "$dockerHubUsername/db:$dockerImageTag"
