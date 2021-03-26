@@ -8,7 +8,7 @@ pipeline {
         imageName1 = "$dockerHubUsername/wordpress:$dockerImageTag"
         imageName2 = "$dockerHubUsername/db:$dockerImageTag"
         imageName3 = "$dockerHubUsername/webserver:$dockerImageTag"
-        imageName4 = "$dockerHubUsername/cerbot:$dockerImageTag"
+        imageName4 = "$dockerHubUsername/certbot:$dockerImageTag"
     }
     agent any
     stages {
