@@ -1,7 +1,8 @@
 pipeline {
     environment{
         dockerHubCredentials = "docker-hub-credentials"
-        dockerImage1 = ' '
+        dockerImage1 = ''
+        dockerImage2 = ''
         dockerHubUsername = "oxlamonsrivne"
         dockerImageTag = "1.0.0"
         imageName1 = "$dockerHubUsername/wordpress:$dockerImageTag"
@@ -11,7 +12,7 @@ pipeline {
     }
     agent any
     stages {
-        stage('docker-compose up') {
+        stage('docker-compose up -d') {
             steps {
                 sh 'docker ps -a'
                 sh 'docker images '
