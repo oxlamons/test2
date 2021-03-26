@@ -8,7 +8,7 @@ pipeline {
         imageName1 = "$dockerHubUsername/wordpress:$dockerImageTag"
         imageName2 = "$dockerHubUsername/db:$dockerImageTag"
         imageName3 = "$dockerHubUsername/webserver:$dockerImageTag"
-        imageName4 = "$dockerHubUsername/cerboot:$dockerImageTag"
+        imageName4 = "$dockerHubUsername/cerbot:$dockerImageTag"
     }
     agent any
     stages {
@@ -41,7 +41,7 @@ pipeline {
                     sh 'docker tag wordpress:5.1.1-fpm-alpine $imageName1'
                     sh 'docker tag mysql:8.0 $imageName2'
                     sh 'docker tag nginx:1.15.12-alpine $imageName3'
-                    sh 'docker tag certboot/cerboot:latest $imageName4'
+                    sh 'docker tag certbot/cerbot:latest $imageName4'
                 }
             }
 
