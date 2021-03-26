@@ -41,7 +41,8 @@ pipeline {
                     sh 'docker tag wordpress:5.1.1-fpm-alpine $imageName1'
                     sh 'docker tag mysql:8.0 $imageName2'
                     sh 'docker tag nginx:1.15.12-alpine $imageName3'
-                    sh 'docker tag certbot/cerbot $imageName4'
+                    sh 'docker tag certbot/certbot:latest $imageName4'
+                    sh 'docker images'
                 }
             }
 
@@ -53,7 +54,7 @@ pipeline {
                      sh 'docker push oxlamonsrivne/wordpress:$dockerImageTag'
                      sh 'docker push oxlamonsrivne/db:$dockerImageTag'
                      sh 'docker push oxlamonsrivne/webserver:$dockerImageTag'
-                     sh 'docker push oxlamonsrivne/cerbot:$dockerImageTag'
+                     sh 'docker push oxlamonsrivne/certbot:$dockerImageTag'
                  //dockerImage1.push()
                  //dockerImage2.push()
                 // dockerImage3.push()
