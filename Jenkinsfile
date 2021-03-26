@@ -47,7 +47,7 @@ pipeline {
             steps{
                 script {
                  docker.withRegistry( '', 'dockerHubCredentials') {
-                     sh 'docker push ${imageName1}'
+                     sh 'docker push oxlamonsrivne/wordpress:1.0'
                  //dockerImage1.push()
                  //dockerImage2.push()
                 // dockerImage3.push()
