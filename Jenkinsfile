@@ -38,7 +38,7 @@ pipeline {
                      //dockerImage2 = docker.build(imageName2, '~/db')
                     //dockerImage3 = docker.build(imageName3, '~/webserver')
                     //dockerImage4 = docker.build(imageName4, '~/cerboot')
-                    sh 'docker tag wordpress:5.1.1-fpm-alpine oxlamonsrivne/wordpress:dockerImageTag'
+                    sh 'docker tag wordpress:5.1.1-fpm-alpine oxlamonsrivne/wordpress:${dockerImageTag}'
                 }
             }
 
@@ -47,11 +47,11 @@ pipeline {
             steps{
                 script {
                  docker.withRegistry( '', 'dockerHubCredentials') {
-                 //sh 'docker push ${dockerHubUsername}/mysql:${dockerImageTag}'
-                 dockerImage1.push()
-                 dockerImage2.push()
-                 dockerImage3.push()
-                 dockerImage4.push()
+                 sh 'docker push ${dockerHubUsername}/wordpress:${dockerImageTag}'
+                 //dockerImage1.push()
+                 //dockerImage2.push()
+                // dockerImage3.push()
+                 //dockerImage4.push()
                     }
                 }
             }
