@@ -20,7 +20,7 @@ pipeline {
         }
         stage('stop running containers') {
             steps {
-                sh 'docker images '
+                sh 'docker image ls '
                 sh 'docker-compose stop'
                 sh 'docker images '
             }
@@ -33,7 +33,7 @@ pipeline {
                      //image = docker.image(':bar')
                     // image.pull()
                // sh 'docker tag mysql ${dockerHubUsername}:${dockerImageTag}'
-                    dockerImage1 = docker.build(imageName1, '~/wordpres')
+                    dockerImage1 = docker.build(imageName1, './var/wordpres')
                     dockerImage2 = docker.build(imageName2, '~/db')
                     dockerImage3 = docker.build(imageName3, '~/webserver')
                     dockerImage4 = docker.build(imageName4, '~/cerboot')
