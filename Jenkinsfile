@@ -14,15 +14,15 @@ pipeline {
         stage('docker-compose up') {
             steps {
                 sh 'docker ps -a'
-                sh 'docker images ls'
+                sh 'docker images '
                 sh 'docker-compose  up -d'
             }
         }
         stage('stop running containers') {
             steps {
-                sh 'docker images ls'
+                sh 'docker images '
                 sh 'docker-compose stop'
-                sh 'docker images ls'
+                sh 'docker images '
             }
         }
         stage('build images'){
