@@ -1,9 +1,9 @@
 pipeline {
     environment{
         dockerHubCredentials = "docker-hub-credentials"
-        dockerImage1 = ''
+        dockerImage = ''
         dockerImage2 = ''
-        dockerHubUsername = "oxlamonsrivne"
+        dockerHubUsernae = "oxlamonsrivne"
         dockerImageTag = "1.0.0"
         imageName1 = "$dockerHubUsername/wordpress:$dockerImageTag"
         imageName2 = "$dockerHubUsername/db:$dockerImageTag"
