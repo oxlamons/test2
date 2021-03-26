@@ -4,7 +4,7 @@ pipeline {
         dockerImage = ''
         dockerImage2 = ''
         dockerHubUsernae = "oxlamonsrivne"
-        dockerImageTag = "1.0.0"
+        dockerImageTag = "1.0"
         imageName1 = "$dockerHubUsername/wordpress:$dockerImageTag"
         imageName2 = "$dockerHubUsername/db:$dockerImageTag"
         imageName3 = "$dockerHubUsername/webserver:$dockerImageTag"
@@ -47,7 +47,7 @@ pipeline {
             steps{
                 script {
                  docker.withRegistry( '', 'dockerHubCredentials') {
-                 sh 'docker push ${dockerHubUsername}/wordpress:${dockerImageTag}'
+                     sh 'docker push ${imageName1}'
                  //dockerImage1.push()
                  //dockerImage2.push()
                 // dockerImage3.push()
