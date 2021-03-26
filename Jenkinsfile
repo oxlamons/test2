@@ -36,8 +36,9 @@ pipeline {
                // sh 'docker tag mysql ${dockerHubUsername}:${dockerImageTag}'
                    //  dockerImage1 = docker.build(imageName1, 'wordpress')
                      //dockerImage2 = docker.build(imageName2, '~/db')
-                    dockerImage3 = docker.build(imageName3, '~/webserver')
-                    dockerImage4 = docker.build(imageName4, '~/cerboot')
+                    //dockerImage3 = docker.build(imageName3, '~/webserver')
+                    //dockerImage4 = docker.build(imageName4, '~/cerboot')
+                    sh ' docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
                 }
             }
 
