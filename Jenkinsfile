@@ -53,7 +53,7 @@ pipeline {
                      sh 'docker push oxlamonsrivne/wordpress:$dockerImageTag'
                      sh 'docker push oxlamonsrivne/db:$dockerImageTag'
                      sh 'docker push oxlamonsrivne/webserver:$dockerImageTag'
-                     sh 'docker push oxlamonsrivne/cerboot:$dockerImageTag'
+                     sh 'docker push oxlamonsrivne/cerbot:$dockerImageTag'
                  //dockerImage1.push()
                  //dockerImage2.push()
                 // dockerImage3.push()
