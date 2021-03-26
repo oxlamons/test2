@@ -38,7 +38,7 @@ pipeline {
                      //dockerImage2 = docker.build(imageName2, '~/db')
                     //dockerImage3 = docker.build(imageName3, '~/webserver')
                     //dockerImage4 = docker.build(imageName4, '~/cerboot')
-                    sh 'docker tag wordpress:5.1.1-fpm-alpine:${imageName1}'
+                    sh 'docker tag wordpress:5.1.1-fpm-alpine ${imageName1}'
                 }
             }
 
